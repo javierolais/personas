@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="col-md-4 offset-md-4">
+    <div class="card" style="margin-top: 4em;">
+      <div class="card-header text-center" style="background-color: #006400; color: white;">
+        Contacto de soporte
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="nombre" id="" placeholder="Nombre completo" class="form-control" autofocus [(ngModel)]="persona.nombre"
+            />
+          </div>
+          <br>
+          <div class="form-group">
+            <label>Empresa</label>
+            <input type="text" name="empresa" id="" placeholder="Empresa" class="form-control" [(ngModel)]="persona.empresa"
+            />
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="text" name="correo" id="" placeholder="Correo electrónico" class="form-control" [(ngModel)]="persona.correo"
+            />
+          </div>
+          <br>
+          <div style="display: flex; justify-content: space-between;">
+            <label>Teléfono</label>
+            <label>Categoría</label>
+          </div>
+          <div class="input-group mb-3 form-group">
+            <input type="text" name="telefono" id="" placeholder="Teléfono" class="form-control" [(ngModel)]="persona.telefono"
+            />
+            <span class="input-group-text">|</span>
+            <select class="form-select"  [(ngModel)]="persona.categoria"  name="categoria" placeholder="Seleccione la categoria">
+              <option value="Facturacion" selected>Facturación</option>
+              <option value="Soporte tecnico">Soporte técnico</option>
+              <option value="Ventas">Ventas</option>
+              <option value="Informacion general">Información general</option>
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea name="mensaje" id="" placeholder="Mensaje" class="form-control" [(ngModel)]="persona.mensaje"
+            ></textarea>
+          </div>
+          <br>
+          <button class="btn btn-success btn-block" (click)="savePersona()">
+            Guardar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
